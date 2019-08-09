@@ -9,6 +9,7 @@ params:
     Anna Spiers (?)^1,2^
     Megan Cattau (?)^1,3^,
     Joe McGlinchy (?)^1^,
+    Intermountain Drone Ecology Network,
     Jennifer Balch^1^
   affiliation: |
     ^1^Earth Lab, University of Colorado-Boulder; Boulder, CO, USA  
@@ -76,7 +77,7 @@ Thus, drone ecology is at a pivotal moment in its development wherein decisions 
 
 We advocate an open science model by which new, potential practitioners are welcomed into the field with a clear-eyed view of how to best make use of the emerging technology in a practical sense.
 
-In this brief **Communication**, we answer the call of @wyngaard2019 and propose a data organization and management scheme that will help guide users to making intentional decisions about drone-derived data to foster collaboration, data privacy, and reproducible science using data that may be many orders of magnitude larger than those typically collected by ecologists.
+In this brief *Communication*, we answer the call of @wyngaard2019 and propose a data organization and management scheme that will help guide users to making intentional decisions about drone-derived data to foster collaboration, data privacy, and reproducible science using data that may be many orders of magnitude larger than those typically collected by ecologists.
 
 ## Data collection
 
@@ -112,11 +113,11 @@ Domain-specific information extracted from Level 2 products.
 
 #### Level 3a
 
-Information extracted using **just** spectral information or **just** geometric information.
+Information extracted using *just* spectral information or *just* geometric information.
 
 #### Level 3b
 
-Information extracted that uses **both** spectral and geometric information.
+Information extracted that uses *both* spectral and geometric information.
 
 ### Level 4
 
@@ -128,7 +129,7 @@ fig_nums(name = "fig-drone-data-levels", "Proposed data levels for drone-derived
 
 ![`r fig_nums("fig-drone-data-levels")`](../../figures/drone-data-levels.png){ height=8in }
 
-`r fig_nums(name = "fig-drone-data-levels", display = "cite")`
+<!-- `r fig_nums(name = "fig-drone-data-levels", display = "cite")` -->
 <!-- `r table_nums(name = "table-rededge-specs", display = "cite")` -->
 
 ```{r}
