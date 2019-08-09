@@ -2,7 +2,7 @@
 bibliography: ../docs_carpentry/pde-data-management.bib
 csl: ../docs_carpentry/drones.csl
 params:
-  title: "Practical drone ecology: Data management"
+  title: "Practical drone ecology: Data management to facilitate open, reproducible science in drone-based terrestrial ecology applications"
   author: |
     Michael J. Koontz^1\*^,
     Victoria Scholl (?)^1^,
@@ -17,7 +17,7 @@ params:
   correspondence: |
     michael.koontz@colorado.edu
   keywords: |
-    drone, sUAS, data management, open science
+    drone, sUAS, data levels, data management, open science
   date_generated: !r format(Sys.Date(), "%B %d, %Y")
   
 geometry: margin=1in
@@ -68,9 +68,59 @@ Date report generated: `r params$date_generated`
 
 ## Introduction
 
-## Methods
+For drone technology to revolutionize spatial ecology [@anderson2013], it must move beyond the "peak of inflated expectations" on the Gartner Hype Cycle for Emerging Technologies [@lee2015]. 
 
-### Study system
+Drones can be a means to democratize landscape and macroscale ecology due to their relative inexpensiveness, their ease of use, and their ability to meet the demanding primary need of these disciplines: fine-enough resolution data at a broad-enough spatial extent.
+
+Thus, drone ecology is at a pivotal moment in its development wherein decisions made by current practitioners can determine whether the field will add to or subtract from the "research debt" of future practitioners [@olah2017].
+
+We advocate an open science model by which new, potential practitioners are welcomed into the field with a clear-eyed view of how to best make use of the emerging technology in a practical sense.
+
+In this brief **Communication**, we answer the call of @wyngaard2019 and propose a data organization and management scheme that will help guide users to making intentional decisions about drone-derived data to foster collaboration, data privacy, and reproducible science using data that may be many orders of magnitude larger than those typically collected by ecologists.
+
+## Data collection
+
+- Multiple SD cards
+- Multiple hard drives in the field (to ensure redundancy)
+- Network attached storage
+- Cloud backup
+- Separate hard drive for local processing
+
+## Conceptual framework for varying levels of drone-derived data products
+
+NASA developed the concept of data levels (https://earthdata.nasa.gov/collaborate/open-data-services-and-software/data-information-policy/data-levels) as a means of organizing the conceptual flow of a processing pipeline for Earth observation data (e.g., from satellites).
+
+There are some parallels with drone-derived data, but some important differences that limit the ability to map the data typically collected for drone ecology onto these established levels [@wyngaard2019].
+
+We propose a scheme that fits the spirit of the NASA data levels but that more appropriately maps to typical Structure from Motion workflows for terrestrial ecology missions. This example is a plant science example (measuring and classifying trees), but we hope it has some capacity to generalize to other types of data collection for ecological studies.
+
+### Level 0
+
+Raw data from sensors. Often images representing reflectance or emission of objects on the ground.
+
+### Level 1
+
+Basic outputs from photogrammetric software.
+
+### Level 2
+
+Radiometrically or geometrically corrected outputs from photogrammetric software. Some of these corrections can be done within the photogrammetry software itself. Some can be done outside the photogrammetry software using other software (e.g., `R` [@rcoreteam2018]).
+
+### Level 3
+
+Domain-specific information extracted from Level 2 products.
+
+#### Level 3a
+
+Information extracted using **just** spectral information or **just** geometric information.
+
+#### Level 3b
+
+Information extracted that uses **both** spectral and geometric information.
+
+### Level 4
+
+Aggregations of Level 3 products to regular grids. For instance, to match to other sensors or to account for the scale at which calibration was performed.
 
 ```{r}
 fig_nums(name = "fig-drone-data-levels", "Proposed data levels for drone-derived data used in ecology applications.")
@@ -99,8 +149,6 @@ fig_nums(name = "fig-drone-data-levels", "Proposed data levels for drone-derived
 #              caption = table_nums(name = "table-rededge-specs"),
 #              keep.line.breaks = TRUE)
 ```
-
-## Results
 
 ## Discussion
 
