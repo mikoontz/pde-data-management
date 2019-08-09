@@ -34,3 +34,9 @@ vignettes/*.pdf
 
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
+.Rproj.user
+
+.DS_Store
+figures/drone-data-levels-components/*
+figures/drone-data-levels.png
+figures/drone-data-levels.svg
